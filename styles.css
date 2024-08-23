@@ -8,12 +8,36 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(186, 186, 186, 0.5);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+    color:#fff;
+  }
+  #navbar img {
+    height: 40px;
+  }
+  
+  #navbar a {
+    margin-left: 0px;
+    text-decoration: none; /* リンクの下線を消す */
+    color: inherit; /* 親要素の色を継承 */
+  }
+  
+  #navbar a:first-child {
+    margin-left: 0;
+  }
+
 
 main {
     padding: 2rem;

@@ -24,20 +24,22 @@ body {
 
     color:#fff;
   }
-  #navbar img {
+#navbar img {
     height: 40px;
   }
   
-  #navbar a {
-    margin-left: 0px;
-    text-decoration: none; /* リンクの下線を消す */
-    color: inherit; /* 親要素の色を継承 */
-  }
   
-  #navbar a:first-child {
-    margin-left: 0;
-  }
-
+.navlinks {
+      display: flex;
+      justify-content: flex-end; /* aタグを右詰めに配置 */
+      flex-grow: 1; /* 右側に十分なスペースを持たせる */
+    }
+    
+.navlinks a {
+      margin-right: 5%;
+      text-decoration: none; /* リンクの下線を消す */
+      color: inherit; /* 親要素の色を継承 */
+    }
 
 main {
     padding: 2rem;

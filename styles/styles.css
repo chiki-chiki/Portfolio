@@ -247,9 +247,12 @@ h2 {
 }
 #skills h2{
     margin-top: 5%;
-    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 40px;
+
+    margin-block-end: 0.5em;;
 }
 
 .waterfall-V-model{
@@ -327,11 +330,15 @@ h2 {
 .develop-exp{
     width: 50%;
 }
+
 .develop-tools{
     background-color: #d7d7d7;
     width: 95%;
     margin-left: 2.5%;
-    border-radius: 10px;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 70px;
+
 }
 .develop-tool{
     display: flex;
@@ -342,6 +349,11 @@ h2 {
 .develop-tool h3,.develop-tool h4{
     margin-block-start: 0;
     margin-block-end: 0;
+
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
 }
 .develop-tool h3{
     width:20%;
@@ -438,6 +450,13 @@ h2 {
     color:#ffffff;
 
 }
+#contact p{
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color:#ffffff;
+}
 
 .SNSs{
     display: flex;
@@ -451,10 +470,15 @@ h2 {
 
 footer {
     background-color: #bababa;
-    color: #fff;
     text-align: center;
     padding: 1rem 0;
     /*position: fixed;*/
     width: 100%;
     bottom: 0;
+
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    color:#ffffff;
 }

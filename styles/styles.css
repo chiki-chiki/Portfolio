@@ -44,12 +44,14 @@ body {
         font-weight: 500;
         font-style: normal;
     }
-
+/*
 main {
     padding: 2rem;
 }
-
-
+*/
+h1{
+    margin-block-end: 0.2em;
+}
 
 h2 {
     color: #555;
@@ -111,12 +113,13 @@ h2 {
     text-align: center;
     padding-bottom: 5%;
 }
+
 #profile h1{
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
     font-size: 64px;
-    padding-top: 10%;
+    padding-top: 13%;
 }
 
 .profile-contents-all{
@@ -192,38 +195,8 @@ h2 {
     background-position: center top; /* 画像を中央に配置 */
     z-index: 2;
 }
-/*
-#works::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 26%;
-    background-color: white;
-    z-index: 1;
-    background-image: url('../assets/images/background-works-top.svg');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center top;
-}
 
-#works::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    
-    z-index: 2;
-}
-    */
 .works-head,.works-foot{
-    /*background-color: #F2F4F8;
-    width: 100%;
-    height: auto;*/
-
     background-color: #F2F4F8;
     display: block;
     width: 100%; /* 横幅いっぱいに広げる */
@@ -260,7 +233,7 @@ h2 {
 }
 
 #skills{
-    height: 100vh;
+    height: auto;
     text-align: center;
     padding-bottom: 5%;
     background-color: #F2F4F8;
@@ -272,50 +245,212 @@ h2 {
     font-size: 64px;
     margin-block-start: 0;
 }
+#skills h2{
+    margin-top: 5%;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
 .waterfall-V-model{
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+
+    background: url('../assets/images/background-VM-all.svg');
+    background-size: 80% 90%; /* 画像を画面いっぱいに広げる */
+    background-position: center top; /* 画像の中央を基準に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
     
+
 }
 .VM-1,.VM-2,.VM-3,.VM-4{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1%;
 }
-.VM-1{
-    width:80%
-}
-.VM-2{
-    width:60%
-}
-.VM-3{
-    width:40%
-}
-.VM-4{
-    width: 20%;
-}
+
 .process-design,.process-test{
     position: relative;
     text-align: center;
     width: 20%;
 }
-/*
+
+.VM-1 .process-design{
+    margin-left: 10%;
+}
 .VM-1 .process-test{
-    padding-left: 60;
+    margin-right: 10%;
+}
+.VM-2 .process-design{
+    margin-left: 20%;
 }
 .VM-2 .process-test{
-    padding-left: 40%;
+    margin-right: 20%;
+}
+.VM-3 .process-design{
+    margin-left:30%;
 }
 .VM-3 .process-test{
-    padding-left: 20%;
+    margin-right: 30%;
 }
-*/
+.VM-4 .process-design{
+    margin-left:40%;
+}
 .process-design img,.process-test img{
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    height: 100%;
+}
+.process-design h3,.process-design h4,.process-test h3,.process-test h4{
+    position: relative;
+    z-index: 2;
 }
 
+
+.process-design h3,.process-test h3{
+    font-size: 20px;
+    margin-block-end: 0;
+}
+
+.process-design h4,.process-test h4{
+    font-size: 36px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.develop-all{
+    display: flex;
+}
+.develop-exp{
+    width: 50%;
+}
+.develop-tools{
+    background-color: #d7d7d7;
+    width: 95%;
+    margin-left: 2.5%;
+    border-radius: 10px;
+}
+.develop-tool{
+    display: flex;
+    justify-content: center;
+    padding-bottom:10px;
+
+}
+.develop-tool h3,.develop-tool h4{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.develop-tool h3{
+    width:20%;
+}
+
+.meter {
+    width: 40%; /* 横幅を100%に設定 */
+    height: 30px; /* 高さを30pxに設定 */
+    background-color: #F2F4F8; /* 灰色のベースメーター */
+    position: relative; /* 中の要素を絶対配置するために相対配置 */
+    border-radius: 10px; /* 角を丸くする */
+    overflow: hidden; /* 子要素が丸みを超えないようにする */
+}
+
+.meter-fill {
+    width: 0%;
+    height: 100%; /* メーターの高さに合わせる */
+    background-color: #FFB800; /* 黄色 */
+    position: absolute; /* 親要素の位置に合わせる */
+    top: 0;
+    left: 0;
+    border-radius: 10px; /* 角を丸くする */
+}
+
+/* 各メーターの塗りつぶし割合を設定 */
+.meter1 .meter-fill {
+    animation: fillMeter-1 2s forwards; /* アニメーションを設定 */
+}
+@keyframes fillMeter-1 {
+    to {
+        width: 20%; /* 最終的に20%まで埋める */
+    }
+}
+
+.meter2 .meter-fill {
+    animation: fillMeter-2 2s forwards; /* アニメーションを設定 */
+}
+@keyframes fillMeter-2 {
+    to {
+        width: 40%; /* 最終的に40%まで埋める */
+    }
+}
+
+.meter3 .meter-fill {
+    animation: fillMeter-3 2s forwards; /* アニメーションを設定 */
+}
+@keyframes fillMeter-3 {
+    to {
+        width: 60%; /* 最終的に60%まで埋める */
+    }
+}
+.meter4 .meter-fill {
+    animation: fillMeter-4 2s forwards; /* アニメーションを設定 */
+}
+@keyframes fillMeter-4 {
+    to {
+        width: 80%; /* 最終的に80%まで埋める */
+    }
+}
+.meter5 .meter-fill {
+    animation: fillMeter-5 2s forwards; /* アニメーションを設定 */
+}
+@keyframes fillMeter-5 {
+    to {
+        width: 100%; /* 最終的に100%まで埋める */
+    }
+}
+
+#contact{
+    height: auto;
+    text-align: center;
+    position: relative;/*疑似要素用*/
+    background-color: #24A148 ;
+    /*background-image: url('../assets/images/background-works-top.svg');  画像を指定 */
+    background-size: 100% auto; /* 横幅を100%、高さを自動調整 */
+    background-repeat: no-repeat; /* 繰り返しを無効にする */
+    background-position: center top; /* 画像を中央に配置 */
+    z-index: 2;
+}
+.contact-head{
+    background-color: #F2F4F8;
+    display: block;
+    width: 100%; /* 横幅いっぱいに広げる */
+    height: auto; /* 高さを自動調整 */
+    margin: 0; /* 余白をなくす */
+    padding: 0; /* 余白をなくす */
+}
+#contact h1{
+    margin-top: 0;
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 64px;
+    color:#ffffff;
+
+}
+
+.SNSs{
+    display: flex;
+    justify-content: center;
+}
+.SNS{
+    width:10%;
+}
+
+
+
 footer {
-    background-color: #333;
+    background-color: #bababa;
     color: #fff;
     text-align: center;
     padding: 1rem 0;

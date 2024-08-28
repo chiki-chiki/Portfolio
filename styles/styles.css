@@ -259,8 +259,60 @@ h2 {
 
 }
 
-
-
+#skills{
+    height: 100vh;
+    text-align: center;
+    padding-bottom: 5%;
+    background-color: #F2F4F8;
+}
+#skills h1{
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 64px;
+    margin-block-start: 0;
+}
+.waterfall-V-model{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+.VM-1,.VM-2,.VM-3,.VM-4{
+    display: flex;
+    justify-content: space-between;
+}
+.VM-1{
+    width:80%
+}
+.VM-2{
+    width:60%
+}
+.VM-3{
+    width:40%
+}
+.VM-4{
+    width: 20%;
+}
+.process-design,.process-test{
+    position: relative;
+    text-align: center;
+    width: 20%;
+}
+/*
+.VM-1 .process-test{
+    padding-left: 60;
+}
+.VM-2 .process-test{
+    padding-left: 40%;
+}
+.VM-3 .process-test{
+    padding-left: 20%;
+}
+*/
+.process-design img,.process-test img{
+    position: absolute;
+}
 
 footer {
     background-color: #333;

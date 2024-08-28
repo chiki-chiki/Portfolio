@@ -186,13 +186,13 @@ h2 {
     text-align: center;
     position: relative;/*疑似要素用*/
     background-color: #24A148 ;
-    background-image: url('../assets/images/background-works-top.svg'); /* 画像を指定 */
+    /*background-image: url('../assets/images/background-works-top.svg');  画像を指定 */
     background-size: 100% auto; /* 横幅を100%、高さを自動調整 */
     background-repeat: no-repeat; /* 繰り返しを無効にする */
     background-position: center top; /* 画像を中央に配置 */
     z-index: 2;
 }
-
+/*
 #works::before {
     content: "";
     position: absolute;
@@ -218,21 +218,25 @@ h2 {
     
     z-index: 2;
 }
+    */
+.works-head,.works-foot{
+    /*background-color: #F2F4F8;
+    width: 100%;
+    height: auto;*/
 
-.works-underline{
-    padding-top: 14%;
+    background-color: #F2F4F8;
+    display: block;
+    width: 100%; /* 横幅いっぱいに広げる */
+    height: auto; /* 高さを自動調整 */
+    margin: 0; /* 余白をなくす */
+    padding: 0; /* 余白をなくす */
 }
-
-
 #works h1{
-    position: absolute;
-    z-index: 3;
     margin-top: 0;
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
     font-size: 64px;
-    padding-top: 10%;
     color:#ffffff;
 
 }
@@ -254,6 +258,7 @@ h2 {
     color:#ffffff;
 
 }
+
 
 
 

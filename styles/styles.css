@@ -161,7 +161,8 @@ h2 {
 .hobby{
     text-align: center;
     width: 30%;
-    padding-left:5%
+    padding-left:2.5%;
+    padding-right:2.5%;
 }
 .hobby img{
     width:100%;
@@ -500,7 +501,7 @@ footer {
     }
     .profile-contents-all{
         display:flex;
-        justify-content: center;
+        align-items: center;
         flex-direction: column;
     }
     .portrait{
@@ -508,6 +509,20 @@ footer {
         width: 50%;
         text-align: center;
         
+    }
+    .profile-contents{
+        align-items: center;
+    }
+    .profile-contents p,.profile-contents h2{
+        padding-left: 0%;
+    }
+    .profile-hobbys{
+        width: 100%;
+        margin-left: 0%;
+    }
+    .works-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 }
 

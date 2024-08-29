@@ -256,6 +256,7 @@ h2 {
 }
 
 .waterfall-V-model{
+    margin-top:3%;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -450,6 +451,9 @@ h2 {
     color:#ffffff;
 
 }
+.contact-underline{
+    padding-bottom:3%;
+}
 #contact p{
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
@@ -481,4 +485,38 @@ footer {
     font-style: normal;
     font-size: 20px;
     color:#ffffff;
+}
+
+/* 画面幅が600px以下の場合のスタイル */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .menu {
+        display: none;
+    }
+    #profile{
+        height: auto;
+    }
+    .profile-contents-all{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .portrait{
+        padding-left: 0;
+        width: 50%;
+        text-align: center;
+        
+    }
+}
+
+/* 画面幅が601px以上、1024px以下の場合のスタイル */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+    .menu {
+        display: block;
+    }
 }

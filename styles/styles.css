@@ -1,5 +1,9 @@
 /* styles.css */
 
+html{
+    font-size: 20px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -13,17 +17,27 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(186, 186, 186, 0.5);
+    background-color: rgba(242, 244, 248,1);
     transition: background-color 0.3s ease;
     z-index: 1000;
-
+    
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    height: 40px;
     padding: 10px 20px;
-
-    color:#fff;
   }
+  #navbar.scrolled-down {
+    background-color: rgba(242, 244, 248, 0); /* スクロール時に透過 */
+}
+
+#navbar.scrolled-up {
+    background-color: rgba(242, 244, 248, 1); /* スクロールアップ時に不透明 */
+}
+
+#navbar:hover {
+    background-color: rgba(242, 244, 248, 1); /* ホバー時に不透明 */
+}
 #navbar img {
     height: 40px;
   }
@@ -38,11 +52,21 @@ body {
 .navlinks a {
       margin-right: 5%;
       text-decoration: none; /* リンクの下線を消す */
-      color: inherit; /* 親要素の色を継承 */
+      color: #3e3e3e;
       
       font-family: "Zen Maru Gothic", serif;
         font-weight: 500;
         font-style: normal;
+    }
+
+    .menu-btn {
+        display: none; /* 初期状態では非表示 */
+        font-size: 1.2rem;
+        background: none;
+        border: none;
+        color: #3e3e3e;
+        cursor: pointer;
+        margin-right: 5%;
     }
 /*
 main {
@@ -85,13 +109,13 @@ h2 {
 .titletxt h1{
     font-weight: 700;
     font-style: normal;
-    font-size: 96px;
+    font-size: 4.8rem;
 }
 
 .titletxt h2{
     font-weight: 500;
     font-style: normal;
-    font-size: 50px;
+    font-size: 2.5rem;
 }
 .background-title{
     position: absolute;
@@ -104,7 +128,7 @@ h2 {
     z-index: 1; /* テキストの後ろに表示されるようにする */
 }
 #profile{
-    height: 100vh;
+    height: auto;
     background: url('../assets/images/background-profile.svg'),
     linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);
     background-size: cover; /* 画像を画面いっぱいに広げる */
@@ -118,7 +142,7 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 64px;
+    font-size: 3.2rem;
     padding-top: 13%;
 }
 
@@ -139,13 +163,13 @@ h2 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1rem;
     text-align: left;
 }
 .profile-contents h2{
     width:60%;
     padding-left:8%;
-    font-size: 32px;
+    font-size: 1.6rem;
     font-family: "Zen Maru Gothic", serif;
     font-weight: 700;
     font-style: normal;
@@ -168,7 +192,7 @@ h2 {
     width:100%;
 }
 .hobby h3{
-    font-size: 24px;
+    font-size: 1.2rem;
     font-family: "Zen Maru Gothic", serif;
     font-weight: 700;
     font-style: normal;
@@ -182,7 +206,7 @@ h2 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 18px;
+    font-size: 0.9rem;
     margin-top: 0;
 }
 #works{
@@ -210,7 +234,7 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 64px;
+    font-size: 3.2rem;
     color:#ffffff;
 
 }
@@ -228,7 +252,7 @@ h2 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 24px;
+    font-size: 1.2rem;
     color:#ffffff;
 
 }
@@ -243,7 +267,7 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 64px;
+    font-size: 3.2rem;
     margin-block-start: 0;
 }
 #skills h2{
@@ -251,7 +275,7 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 40px;
+    font-size: 2rem;
 
     margin-block-end: 0.5em;;
 }
@@ -317,12 +341,13 @@ h2 {
 
 
 .process-design h3,.process-test h3{
-    font-size: 20px;
+    font-size: 1rem;
+    white-space: nowrap;
     margin-block-end: 0;
 }
 
 .process-design h4,.process-test h4{
-    font-size: 36px;
+    font-size: 1.8rem;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -355,7 +380,7 @@ h2 {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 24px;
+    font-size: 1.2rem;
 }
 .develop-tool h3{
     width:20%;
@@ -448,7 +473,7 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 64px;
+    font-size: 3.2rem;
     color:#ffffff;
 
 }
@@ -459,8 +484,11 @@ h2 {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1rem;
     color:#ffffff;
+}
+.mail-img{
+    width: 5%;
 }
 
 .SNSs{
@@ -468,7 +496,11 @@ h2 {
     justify-content: center;
 }
 .SNS{
-    width:10%;
+    width:5%;
+    padding:2%;
+}
+.SNS img{
+    width: 100%;
 }
 
 
@@ -484,18 +516,41 @@ footer {
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1rem;
     color:#ffffff;
 }
 
 /* 画面幅が600px以下の場合のスタイル */
 @media screen and (max-width: 600px) {
+    html{
+        font-size: 16px;
+    }
     .container {
         flex-direction: column;
     }
     .menu {
         display: none;
     }
+    .navlinks {
+        display: none; /* 初期状態ではメニュー非表示 */
+        flex-direction: column; /* 縦並びに変更 */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(242, 244, 248, 0.9);
+        width: 100%;
+        text-align: right;
+        margin-right: 5%;
+    }
+
+    .navlinks.active {
+        display: flex; /* ハンバーガーメニューがクリックされたときに表示 */
+    }
+
+    .menu-btn {
+        display: block; /* スマホサイズでは表示 */
+    }
+
     #profile{
         height: auto;
     }
@@ -524,14 +579,93 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+    .process-design img,.process-test img{
+        width: 100%;
+    }
+    .process-design h3,.process-test h3{
+        font-size: 0.9rem;
+        margin-block-start: 0;
+    }
+    .process-design h4,.process-test h4{
+        font-size: 1rem;
+    }
+    .VM-1 .process-design{
+        margin-left: 5%;
+    }
+    .VM-1 .process-test{
+        margin-right: 5%;
+    }
+    .VM-2 .process-design{
+        margin-left: 16.6%;
+    }
+    .VM-2 .process-test{
+        margin-right: 16.6%;
+    }
+    .VM-3 .process-design{
+        margin-left:28.2%;
+    }
+    .VM-3 .process-test{
+        margin-right: 28.2%;
+    }
+    .VM-4 .process-design{
+        margin-left:40%;
+    }
+    .develop-all{
+        flex-direction: column;
+    }
+    .develop-exp {
+        width: 100%;
+    }
+    .mail-img{
+        width: 20%;
+    }
+    .SNS{
+        width:20%;
+    }
+    .SNS img{
+        width: 100%;
+    }
+    
 }
 
 /* 画面幅が601px以上、1024px以下の場合のスタイル */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
+    html{
+        font-size: 18px;
+    }
     .container {
         flex-direction: row;
     }
     .menu {
         display: block;
     }
+    #profile{
+        height: auto;
+    }
+    .profile-contents-all{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .portrait{
+        padding-left: 0;
+        width: 30%;
+        text-align: center;
+        
+    }
+    .profile-contents{
+        align-items: center;
+    }
+    .profile-contents p,.profile-contents h2{
+        padding-left: 0%;
+    }
+    .profile-hobbys{
+        width: 80%;
+        margin-left: 0%;
+    }
+    .works-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    
 }

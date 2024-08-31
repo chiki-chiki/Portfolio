@@ -7,12 +7,24 @@ window.addEventListener('scroll', function() {
 
   if (currentScroll > lastScrollTop) {
     // 下スクロール時、ナビゲーションバーを透過させる
-    navbar.style.backgroundColor = 'rgba(186, 186, 186, 0)'; // 透過度50%
+    navbar.classList.add('scrolled-down');
+    navbar.classList.remove('scrolled-up');
   } else {
     // 上スクロール時、ナビゲーションバーを再表示
-    navbar.style.backgroundColor = 'rgba(186, 186, 186, 0.5)'; // 透過なし
+    navbar.classList.add('scrolled-up');
+    navbar.classList.remove('scrolled-down');
   }
 
   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // モバイルやタブレット対応
+});
+
+document.querySelector('.menu-btn').addEventListener('click', function() {
+  document.querySelector('.navlinks').classList.toggle('active');
+});
+
+document.querySelectorAll('.navlinks a').forEach(link=>{
+  link.addEventListener('click', function() {
+  document.querySelector('.navlinks').classList.remove('active');
+});
 });
 

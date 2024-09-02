@@ -152,6 +152,13 @@ h2 {
 .portrait{
     padding-left: 20%;
     width: 30%;
+    opacity: 0; /* 初期状態で透明にする */
+    transform: translateY(20px); /* 初期状態で少し下に配置する */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* フェードインと移動のトランジションを設定 */
+}
+.portrait.loaded{
+    opacity: 1; /* フェードインさせる */
+    transform: translateY(0); /* 元の位置に移動 */
 }
 .profile-contents{
     display: flex;
@@ -351,15 +358,42 @@ h2 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
-.dedelop-head{
-    display: flex;
-    
+
+.develop-head{
+    display:flex;
     flex-direction: column;
+    align-items: center;
 
 }
 .develop-annotation{
+    width: auto;
+    border: 1px solid #d7d7d7;
+    border-radius: 50px;
+    padding: 2%;
+    margin-top: 1%;
     
 }
+.develop-annotation p{
+    text-align: left;
+    
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    padding-left: 1rem;
+
+
+}
+.develop-annotation img{
+    position: absolute;
+    left:0;
+    top:1rem;
+    align-self: center;
+
+}
+
 
 .develop-all{
     display: flex;
@@ -478,6 +512,8 @@ h2 {
     margin: 0; /* 余白をなくす */
     padding: 0; /* 余白をなくす */
 }
+
+
 #contact h1{
     margin-top: 0;
     font-family: "Zen Maru Gothic", serif;
@@ -622,6 +658,14 @@ footer {
     }
     .develop-all{
         flex-direction: column;
+    }
+    .develop-annotation{
+        position: static;
+        width: auto;
+        right:2.5%;
+        display: flex;
+        flex-direction: column;
+    
     }
     .develop-exp {
         width: 100%;

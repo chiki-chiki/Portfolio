@@ -28,3 +28,16 @@ document.querySelectorAll('.navlinks a').forEach(link=>{
 });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const image = document.querySelector('.portrait');
+
+  image.addEventListener('load', function() {
+    image.classList.add('loaded');
+  });
+
+  // 画像がキャッシュされている場合にも対応
+  if (image.complete) {
+    image.classList.add('loaded');
+  }
+});
+

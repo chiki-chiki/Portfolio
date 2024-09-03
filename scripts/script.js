@@ -28,16 +28,88 @@ document.querySelectorAll('.navlinks a').forEach(link=>{
 });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const image = document.querySelector('.portrait');
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.portrait');
 
-  image.addEventListener('load', function() {
-    image.classList.add('loaded');
+  const options = {
+    threshold: 0.1 /* 10%がビューポートに見えたときに発火 */
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度発火したら監視を解除
+      }
+    });
+  }, options);
+
+  images.forEach(image => {
+    observer.observe(image);
   });
-
-  // 画像がキャッシュされている場合にも対応
-  if (image.complete) {
-    image.classList.add('loaded');
-  }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const hobbies = document.querySelectorAll('.hobby');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度発火したら監視を解除
+      }
+    });
+  }, options);
+
+  hobbies.forEach(hobby => {
+    observer.observe(hobby);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const works = document.querySelectorAll('.work');
+
+  const options = {
+    threshold: 0.1 /* 10%がビューポートに見えたときに発火 */
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度発火したら監視を解除
+      }
+    });
+  }, options);
+
+  works.forEach(work => {
+    observer.observe(work);
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const waterfallVModel = document.querySelector('.waterfall-V-model');
+  const process_designs = document.querySelectorAll('.process-design');
+  const process_tests = document.querySelectorAll('.process-test');
+  
+  const options = {
+    threshold: 0.1
+  };
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        process_designs.forEach(el=>el.classList.add('show'));
+        process_tests.forEach(el=>el.classList.add('show'));
+        observer.unobserve(entry.target); // 一度発火したら監視を解除
+      }
+    });
+  }, options);
+
+  observer.observe(waterfallVModel);
+
+  
+});

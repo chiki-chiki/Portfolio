@@ -156,7 +156,7 @@ h2 {
     transform: translateY(20px); /* 初期状態で少し下に配置する */
     transition: opacity 1s ease-out, transform 1s ease-out; /* フェードインと移動のトランジションを設定 */
 }
-.portrait.loaded{
+.portrait.show{
     opacity: 1; /* フェードインさせる */
     transform: translateY(0); /* 元の位置に移動 */
 }
@@ -194,7 +194,27 @@ h2 {
     width: 30%;
     padding-left:2.5%;
     padding-right:2.5%;
+
+    opacity: 0;
+    transform: translateX(-5%); /* 初期状態で少し左に配置 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+.hobby.show {
+    opacity: 1;
+    transform: translateX(0); /* 元の位置に移動 */
+}
+.hobby:nth-child(1) {
+    transition-delay: 0.3s; /* 1つ目は0.5秒遅延 */
+  }
+  
+  .hobby:nth-child(2) {
+    transition-delay: 0.6s; /* 2つ目は1秒遅延 */
+  }
+  
+  .hobby:nth-child(3) {
+    transition-delay: 0.9s; /* 3つ目は1.5秒遅延 */
+  }
+
 .hobby img{
     width:100%;
 }
@@ -254,6 +274,25 @@ h2 {
     padding-top:5%;
 }
 
+.work{
+    opacity: 0;
+    transform: translateY(5%); /* 初期状態で少し下に配置 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.work.show {
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に移動 */
+  }
+
+  .work img {
+    transition: transform 0.3s ease; /* 変化をスムーズにする */
+  }
+  
+  .work img:hover {
+    transform: scale(1.05); /* マウスオーバー時に画像を10%拡大 */
+  }
+  
+
 .work h3{
     text-align: center;
     font-family: "Zen Kaku Gothic New", sans-serif;
@@ -305,13 +344,47 @@ h2 {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1%;
+
+    
 }
 
 .process-design,.process-test{
     position: relative;
     text-align: center;
     width: 20%;
+
+    opacity: 0;
+    transform: translateX(-5%); /* 初期状態で少し左に配置 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+.show{
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に移動 */
+
+}
+.process-design:nth-child(1){
+    transition-delay: 0.1s;
+}
+.process-design:nth-child(2){
+    transition-delay: 0.2s;
+}
+.process-design:nth-child(3){
+    transition-delay: 0.3s;
+}
+.process-design:nth-child(4){
+    transition-delay: 0.4s;
+}
+.process-test:nth-child(1){
+    transition-delay: 0.5s;
+}
+.process-test:nth-child(2){
+    transition-delay: 0.6s;
+}
+.process-test:nth-child(3){
+    transition-delay: 0.7s;
+}
+
 
 .VM-1 .process-design{
     margin-left: 10%;

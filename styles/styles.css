@@ -473,7 +473,16 @@ h2 {
 }
 .develop-exp{
     width: 50%;
+    opacity: 0;
+    transform: translateY(3%); /* 初期状態で少し下に配置 */
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
+.develop-exp.show{
+    opacity: 1;
+    transform: translateY(0); /* 元の位置に移動 */
+}
+
+
 
 .develop-tools{
     background-color: #d7d7d7;

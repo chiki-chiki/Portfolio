@@ -471,17 +471,29 @@ h2 {
 .develop-all{
     display: flex;
 }
+/*
 .develop-exp{
     width: 50%;
     opacity: 0;
-    transform: translateY(3%); /* 初期状態で少し下に配置 */
+    transform: translateY(3%); /* 初期状態で少し下に配置 
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 .develop-exp.show{
     opacity: 1;
-    transform: translateY(0); /* 元の位置に移動 */
+    transform: translateY(0); /* 元の位置に移動 
 }
-
+*/
+.develop-exp {
+    width: 50%;
+    opacity: 0;
+    transform: translateY(3%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .develop-exp.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 
 .develop-tools{
@@ -511,70 +523,88 @@ h2 {
 .develop-tool h3{
     width:20%;
 }
-
+/*
 .meter {
-    width: 40%; /* 横幅を100%に設定 */
-    height: 30px; /* 高さを30pxに設定 */
-    background-color: #F2F4F8; /* 灰色のベースメーター */
-    position: relative; /* 中の要素を絶対配置するために相対配置 */
-    border-radius: 10px; /* 角を丸くする */
-    overflow: hidden; /* 子要素が丸みを超えないようにする */
+    width: 40%; /* 横幅を100%に設定 
+    height: 30px; /* 高さを30pxに設定 
+    background-color: #F2F4F8; /* 灰色のベースメーター 
+    position: relative; /* 中の要素を絶対配置するために相対配置 
+    border-radius: 10px; /* 角を丸くする 
+    overflow: hidden; /* 子要素が丸みを超えないようにする 
 }
 
 .meter-fill {
     width: 0%;
-    height: 100%; /* メーターの高さに合わせる */
-    background-color: #FFB800; /* 黄色 */
-    position: absolute; /* 親要素の位置に合わせる */
+    height: 100%; /* メーターの高さに合わせる 
+    background-color: #FFB800; /* 黄色 
+    position: absolute; /* 親要素の位置に合わせる 
     top: 0;
     left: 0;
-    border-radius: 10px; /* 角を丸くする */
+    border-radius: 10px; /* 角を丸くする 
+    transition: width 2s ease-out;
 }
 
-/* 各メーターの塗りつぶし割合を設定 */
-.meter1 .meter-fill {
-    animation: fillMeter-1 2s forwards; /* アニメーションを設定 */
-}
-@keyframes fillMeter-1 {
-    to {
-        width: 20%; /* 最終的に20%まで埋める */
-    }
-}
-
-.meter2 .meter-fill {
-    animation: fillMeter-2 2s forwards; /* アニメーションを設定 */
-}
-@keyframes fillMeter-2 {
-    to {
-        width: 40%; /* 最終的に40%まで埋める */
-    }
-}
-
-.meter3 .meter-fill {
-    animation: fillMeter-3 2s forwards; /* アニメーションを設定 */
-}
-@keyframes fillMeter-3 {
-    to {
-        width: 60%; /* 最終的に60%まで埋める */
-    }
-}
-.meter4 .meter-fill {
-    animation: fillMeter-4 2s forwards; /* アニメーションを設定 */
-}
-@keyframes fillMeter-4 {
-    to {
-        width: 80%; /* 最終的に80%まで埋める */
-    }
-}
+/* 各メーターの塗りつぶし割合を設定 
 .meter5 .meter-fill {
-    animation: fillMeter-5 2s forwards; /* アニメーションを設定 */
-}
-@keyframes fillMeter-5 {
-    to {
-        width: 100%; /* 最終的に100%まで埋める */
-    }
-}
+    width: 100%;
+  }
 
+  .meter4 .meter-fill {
+    width: 80%;
+  }
+
+  .meter3 .meter-fill {
+    width: 60%;
+  }
+  
+  .meter2 .meter-fill {
+    width: 40%;
+  }
+  
+  .meter1 .meter-fill {
+    width: 20%;
+  }
+  */
+  .meter {
+    width: 40%;
+    height: 30px;
+    background-color: #F2F4F8;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .meter-fill {
+    width: 0%;
+    height: 100%;
+    background-color: #FFB800;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: width 2s ease-out;
+  }
+  
+  /* スキルレベルに応じた幅を指定 */
+  .meter5 .meter-fill {
+    width: 100%;
+  }
+  
+  .meter4 .meter-fill {
+    width: 80%;
+  }
+  
+  .meter3 .meter-fill {
+    width: 60%;
+  }
+  
+  .meter2 .meter-fill {
+    width: 40%;
+  }
+  
+  .meter1 .meter-fill {
+    width: 20%;
+  }
 #contact{
     height: auto;
     text-align: center;

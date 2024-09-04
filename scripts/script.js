@@ -115,23 +115,20 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const developExps = document.querySelectorAll('.develop-exp');
-
+  const developExp = document.querySelector('.develop-exp');
   const options = {
-    threshold: 0.1 /* 10%がビューポートに見えたときに発火 */
+    threshold: 0.1
   };
 
   const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        developExps.forEach(el=>el.classList.add('show'));
-        observer.unobserve(entry.target); // 一度発火したら監視を解除
+        // develop-expのフェードイン
+        developExp.classList.add('show');
+        observer.unobserve(entry.target); // 見えた後は監視を解除
       }
     });
   }, options);
 
-  developExps.forEach(developExp=>{
-    observer.observe(developExp);
-
-  })
+  observer.observe(developExp);
 });

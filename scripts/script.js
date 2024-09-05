@@ -115,7 +115,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const developExp = document.querySelector('.develop-exp');
+  const developExps = document.querySelectorAll('.develop-exp'); // すべての develop-exp 要素を取得
+
   const options = {
     threshold: 0.1
   };
@@ -123,12 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // develop-expのフェードイン
-        developExp.classList.add('show');
-        observer.unobserve(entry.target); // 見えた後は監視を解除
+        // 見えた develop-exp 要素にクラスを追加してフェードイン
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 対象が見えたら監視を解除
       }
     });
   }, options);
 
-  observer.observe(developExp);
+  // 各 develop-exp 要素に observer を適用
+  developExps.forEach(exp => observer.observe(exp));
 });

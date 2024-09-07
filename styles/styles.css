@@ -794,6 +794,9 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
+    .work{
+        width:80%
+    }
     .process-design img,.process-test img{
         width: 100%;
     }

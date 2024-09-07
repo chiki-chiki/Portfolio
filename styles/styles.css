@@ -795,7 +795,10 @@ footer {
         grid-template-rows: auto;
     }
     .work{
-        width:80%
+        width:80%;
+    }
+    .work a img{
+        width:100%;
     }
     .process-design img,.process-test img{
         width: 100%;

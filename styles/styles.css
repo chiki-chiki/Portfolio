@@ -1,5 +1,6 @@
 /* styles.css */
 
+
 html{
     font-size: 20px;
     scroll-behavior: smooth;
@@ -317,12 +318,21 @@ h2 {
     width:80%;
     margin: auto;
     padding-top:5%;
+    justify-items: center;
 }
 
 .work{
     opacity: 0;
     transform: translateY(5%); /* 初期状態で少し下に配置 */
     transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.work{
+    width: 90%;
+    
+}
+.work a img{
+    width:100%;
+    
 }
 .work.show {
     opacity: 1;
@@ -567,6 +577,9 @@ h2 {
 }
 .develop-tool h3{
     width:20%;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: normal;
 }
 /*
 .meter {
@@ -796,9 +809,11 @@ footer {
     }
     .work{
         width:80%;
+        
     }
     .work a img{
         width:100%;
+        
     }
     .process-design img,.process-test img{
         width: 100%;
@@ -896,6 +911,17 @@ footer {
     .works-grid{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
+    }
+    .work{
+        width: 90%;
+        
+    }
+    .work a img{
+        width:100%;
+        
+    }
+    .process-design img,.process-test img{
+        width:100%
     }
     .develop-tool h3{
         width:25%;

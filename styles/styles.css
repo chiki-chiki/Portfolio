@@ -304,7 +304,7 @@ h2 {
 }
 .works-head{
     height: 5%;
-    background: url('../assets/images/background-profile.svg'),
+    background: url('../assets/images/background-works-top.svg'),
     linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);
     background-size: cover; /* 画像を画面いっぱいに広げる */
     background-position: center top; /* 画像の中央を基準に配置 */

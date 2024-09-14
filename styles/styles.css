@@ -302,6 +302,14 @@ h2 {
     margin: 0; /* 余白をなくす */
     padding: 0; /* 余白をなくす */
 }
+.works-head{
+    height: 5%;
+    background: url('../assets/images/background-profile.svg'),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);
+    background-size: cover; /* 画像を画面いっぱいに広げる */
+    background-position: center top; /* 画像の中央を基準に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+}
 #works h1{
     margin-top: 0;
     font-family: "Zen Maru Gothic", serif;

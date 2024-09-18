@@ -175,8 +175,10 @@ h2 {
 }
 #profile{
     height: auto;
-    background: url('../assets/images/background-profile.svg'),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);
+    /*background: url('../assets/images/background-profile.svg'),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);*/
+    /*background-color: #F2F4F8;*/
+    background-image: url('../assets/images/background-profile.svg');
     background-size: cover; /* 画像を画面いっぱいに広げる */
     background-position: center top; /* 画像の中央を基準に配置 */
     background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
@@ -303,9 +305,17 @@ h2 {
     padding: 0; /* 余白をなくす */
 }
 .works-head{
-    height: 5%;
-    background: url('../assets/images/background-works-top.svg'),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0), #F2F4F8 50%);
+    height: 20vh;
+    background-color: #F2F4F8;
+    background-image: url('../assets/images/background-works-top.svg');
+    background-size: cover; /* 画像を画面いっぱいに広げる */
+    background-position: center top; /* 画像の中央を基準に配置 */
+    background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+}
+.works-foot{
+    height: 20vh;
+    background-color: #F2F4F8;
+    background-image: url('../assets/images/background-works-foot.svg');
     background-size: cover; /* 画像を画面いっぱいに広げる */
     background-position: center top; /* 画像の中央を基準に配置 */
     background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */

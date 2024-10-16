@@ -134,3 +134,31 @@ document.addEventListener('DOMContentLoaded', function() {
   // 各 develop-exp 要素に observer を適用
   developExps.forEach(exp => observer.observe(exp));
 });
+
+// すべての開くリンクと閉じるボタンを取得
+const openButtons = document.querySelectorAll(".openModal");
+const closeButtons = document.querySelectorAll(".close");
+
+// 各開くリンクにクリックイベントを設定
+openButtons.forEach(button => {
+    button.onclick = function(event) {
+        event.preventDefault(); // aタグのデフォルト動作をキャンセル
+        const modalId = button.getAttribute("data-modal");
+        document.getElementById(modalId).style.display = "block";
+    };
+});
+
+// 各閉じるボタンにクリックイベントを設定
+closeButtons.forEach(button => {
+    button.onclick = function() {
+        const modalId = button.getAttribute("data-modal");
+        document.getElementById(modalId).style.display = "none";
+    };
+});
+
+// モーダルの外をクリックした時にモーダルを閉じる
+window.onclick = function(event) {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+    }
+};

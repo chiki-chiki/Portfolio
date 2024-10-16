@@ -376,6 +376,42 @@ h2 {
 
 }
 
+/* モーダルのスタイル */
+.modal {
+    display: none; /* 初期状態は非表示 */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(217, 217, 217, 0.8);
+}
+
+/* モーダルコンテンツのスタイル */
+.modal-content {
+    background-image: url('../assets/images/background-work-modal.svg'); /* 画像のパスを指定 */
+    background-size: cover; /* 画像をコンテナ全体にフィットさせる */
+    background-position: center; /* 画像の位置を中央に設定 */
+
+    margin: 5% auto;
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+    max-width: 700px;
+    max-height: 700px;
+
+    /*border-radius: 60px;*/
+}
+
+/* 閉じるボタンのスタイル */
+.close {
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 #skills{
     height: auto;
     text-align: center;

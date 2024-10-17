@@ -135,20 +135,20 @@ document.addEventListener('DOMContentLoaded', function() {
   developExps.forEach(exp => observer.observe(exp));
 });
 
-// すべての開くリンクと閉じるボタンを取得
+// モーダル開閉用のコード
 const openButtons = document.querySelectorAll(".openModal");
 const closeButtons = document.querySelectorAll(".close");
 
-// 各開くリンクにクリックイベントを設定
+// モーダルを開く
 openButtons.forEach(button => {
     button.onclick = function(event) {
-        event.preventDefault(); // aタグのデフォルト動作をキャンセル
+        event.preventDefault();
         const modalId = button.getAttribute("data-modal");
         document.getElementById(modalId).style.display = "block";
     };
 });
 
-// 各閉じるボタンにクリックイベントを設定
+// モーダルを閉じる
 closeButtons.forEach(button => {
     button.onclick = function() {
         const modalId = button.getAttribute("data-modal");
@@ -156,9 +156,27 @@ closeButtons.forEach(button => {
     };
 });
 
-// モーダルの外をクリックした時にモーダルを閉じる
+// モーダルの外をクリックで閉じる
 window.onclick = function(event) {
     if (event.target.classList.contains("modal")) {
         event.target.style.display = "none";
     }
 };
+
+// スライドショー機能のコード
+document.querySelectorAll('.modal').forEach(modal => {
+    const slides = modal.querySelectorAll('.slide');
+    const dots = modal.querySelectorAll('.dot');
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // すべてのスライドとドットのクラスをリセット
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+
+            // クリックされたスライドとドットに「active」クラスを追加
+            slides[index].classList.add('active');
+            dot.classList.add('active');
+        });
+    });
+});

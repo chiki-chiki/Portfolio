@@ -400,8 +400,47 @@ h2 {
     height: 80%;
     max-width: 700px;
     max-height: 700px;
+    text-align: center;
 
     /*border-radius: 60px;*/
+}
+/* スライドショーのスタイル */
+.slideshow {
+    position: relative;
+    width: 40%;
+    height: auto;
+    margin-top: 20px;
+    margin: 0 auto; /* 中央揃え */
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.slide.active {
+    display: block;
+}
+
+/* ナビゲーションボタン */
+.slide-buttons {
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #ff9900;
 }
 
 /* 閉じるボタンのスタイル */

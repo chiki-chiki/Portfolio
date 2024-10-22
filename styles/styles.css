@@ -134,7 +134,10 @@ h2 {
     justify-content: flex-start; /* 左寄せに設定 */
     align-items: center; /* 垂直方向に中央揃え */
     background-color: #ffffff; /* 背景色の設定（オプション） */
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* フェードインアニメーションの設定 */
 }
+
 
 .titletxt{
     position: absolute;

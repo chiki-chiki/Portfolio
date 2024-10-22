@@ -27,6 +27,11 @@ document.querySelectorAll('.navlinks a').forEach(link=>{
   document.querySelector('.navlinks').classList.remove('active');
 });
 });
+//タイトルのフェードイン
+window.addEventListener('load', () => {
+  document.querySelector('#title').style.opacity = '1'; /* 透明度を1にする */
+});
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const images = document.querySelectorAll('.portrait');

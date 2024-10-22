@@ -374,6 +374,9 @@ h2 {
     font-size: 1.2rem;
     color:#ffffff;
 
+    margin-block-start: 0em;
+    margin-block-end: 2em;
+
 }
 
 /* モーダルのスタイル */
@@ -402,8 +405,72 @@ h2 {
     max-height: 700px;
     text-align: center;
 
+    color: #3e3e3e;
+
     /*border-radius: 60px;*/
 }
+
+.modal-content p{
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.modal-heading {
+    display: inline-flex; /* 横並び */
+    align-items: center; /* 上下中央揃え */
+    font-size: 24px;
+    text-decoration: none; /* 下線を削除 */
+    color: inherit; /* 親要素の色に従う */
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    text-decoration: none; /* リンクの下線を消す */
+    position: relative; /* ::afterを使うために相対配置 */
+
+
+}
+
+.modal-heading i {
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+    font-size: 1.5em; /* アイコンのサイズ */
+}
+
+  
+  .modal-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px; /* テキストの少し下に下線を表示 */
+    width: 0;
+    height: 2px;
+    background-color: #3e3e3e;
+    transition: width 0.4s ease, left 0.4s ease; /* アニメーションの速度と効果 */
+  }
+  
+  .modal-heading:hover::after {
+    width: 100%;
+    left: 0; /* 左右に広がる */
+  }
+  
+  .modal-heading:focus::after,
+  .modal-heading:active::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  .modal-heading:hover::after {
+    width: 100%;
+    left: 0;
+  }
 /* スライドショーのスタイル */
 .slideshow {
     position: relative;
@@ -471,7 +538,7 @@ h2 {
     font-style: normal;
     font-size: 2rem;
 
-    margin-block-end: 0.5em;;
+    margin-block-end: 0.2em;;
 }
 
 .waterfall-V-model{
@@ -584,6 +651,7 @@ h2 {
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin-top:5%;
 
 }
 .develop-annotation{

@@ -396,6 +396,7 @@ h2 {
 
 /* モーダルコンテンツのスタイル */
 .modal-content {
+    position: relative;
     background-image: url('../assets/images/background-work-modal_2.svg'); /* 画像のパスを指定 */
     background-size: cover; /* 画像をコンテナ全体にフィットさせる */
     background-position: center; /* 画像の位置を中央に設定 */
@@ -515,10 +516,18 @@ h2 {
 
 /* 閉じるボタンのスタイル */
 .close {
-    float: right;
+    /*float: right;
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;*/
+    position: absolute;
+    bottom: -40px; /* モーダルの下から少し離して配置 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    font-weight: bold;
     cursor: pointer;
+    padding: 8px 16px;
 }
 
 #skills{

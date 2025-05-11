@@ -428,7 +428,6 @@ h2 {
     display: inline-flex; /* 横並び */
     align-items: center; /* 上下中央揃え */
     font-size: 24px;
-    text-decoration: none; /* 下線を削除 */
     color: inherit; /* 親要素の色に従う */
     font-family: "Zen Maru Gothic", serif;
     font-weight: 500;
@@ -443,10 +442,6 @@ h2 {
 
 }
 
-.modal-heading i {
-    margin-right: 8px; /* アイコンとテキストの間隔 */
-    font-size: 1.5em; /* アイコンのサイズ */
-}
 
   
   .modal-heading::after {
@@ -512,6 +507,23 @@ h2 {
 
 .dot.active {
     background-color: #FFB800;
+}
+
+.gitLink{
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-decoration: none; /* リンクの下線を消す */
+    color: #3e3e3e;
+
+}
+.gitLink i{
+    margin-right: 8px; /* アイコンとテキストの間隔 */
+    font-size: 1.5em; /* アイコンのサイズ */
 }
 
 /* 閉じるボタンのスタイル */
